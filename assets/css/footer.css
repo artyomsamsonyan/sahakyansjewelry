@@ -1,0 +1,120 @@
+footer {
+    width: 100%;
+    background-color: #000;
+    z-index: 10;
+}
+
+.footerBox {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 50px;
+}
+
+.footerBox .mainBox .mainLogo {
+    font-family: "Jost";
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.8s ease;
+}
+
+.footerBox .contentBox {
+    display: flex;
+    gap: 100px;
+}
+
+.footerBox .contentBox .InfoCol {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footerBox .contentBox .InfoCol .contentTitle {
+    font-family: "WalbaumCom-Roman";
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footerBox .contentBox .InfoCol .linkList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footerBox .contentBox .InfoCol .linkList a {
+    font-family: "SackersGothic";
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+.footerBox .contentBox .InfoCol .socialLinkList {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footerBox .contentBox .InfoCol .socialLinkList a {
+    display: flex;
+    align-items: center;
+}
+
+.footerBox .contentBox .InfoCol .socialLinkList a img {
+    width: auto;
+    height: 20px;
+    object-fit: contain;
+}
+
+.footerBox .mainLogo img {
+    width: auto;
+    height: 45px;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .footerBox {
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-inline: 15px;
+    }
+
+    .footerBox .mainBox .mainLogo {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .footerBox .contentBox {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footerBox .contentBox .InfoCol {
+        gap: 10px;
+    }
+
+    .footerBox .contentBox .InfoCol .contentTitle {
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 3px;
+    }
+
+    .footerBox .contentBox .InfoCol .linkList {
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    .footerBox .contentBox .InfoCol .linkList a {
+        font-size: 12px;
+        line-height: 15px;
+    }
+}

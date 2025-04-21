@@ -1,0 +1,12 @@
+# Игнорируем wp-config.php
+wp-config.php
+
+# Игнорируем папку с медиафайлами (если они не нужны)
+wp-content/uploads/
+
+# Игнорируем кэш и временные файлы
+wp-content/cache/
+wp-content/backups/
+
+# Игнорируем файлы конфиденциальных данных (.env и т.д.)
+.env

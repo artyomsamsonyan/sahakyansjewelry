@@ -1,0 +1,560 @@
+/* Page Title Section Wrapper */
+.pageTitleSectionWrapper {
+    padding-top: 103px;
+    background-color: #000;
+    z-index: 2;
+    position: relative;
+}
+
+.pageTitleSection {
+    padding-top: 250px;
+    padding-bottom: 60px;
+    background-color: #000;
+}
+
+.pageTitleSection .container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pageTitleSection h2 {
+    max-width: 100vw;
+    font-family: "WalbaumCom-Roman";
+    white-space: nowrap;
+    font-size: 90px;
+    line-height: 90px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.pageTitleSection .productFilterButtons {
+    display: flex;
+    gap: 30px;
+}
+
+.pageTitleSection .productFilterButtons .filterButtons {
+    display: flex;
+    gap: 20px;
+}
+
+.pageTitleSection .productFilterButtons .filterButtons input {
+    display: none;
+}
+
+.pageTitleSection .productFilterButtons .filterButtons .button {
+    font-family: "SackersGothic";
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: lowercase;
+    display: flex;
+    transition: all 0.4s;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 18px;
+}
+
+.pageTitleSection .productFilterButtons .filterButtons .button:hover {
+    background-color: #ffffff42;
+}
+
+.pageTitleSection .productFilterButtons .filterButtons input:checked+.button {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+}
+
+.pageTitleSection .productFilterButtons .showAllButton {
+    font-family: "SackersGothic";
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: lowercase;
+    display: flex;
+    transition: all 0.4s;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    background-color: transparent;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.pageTitleSection .productFilterButtons .showAllButton:hover {
+    background-color: #ffffff42;
+}
+
+/* Portfolio Models List Section */
+.portfolioModelsListSectionWrapper {
+    background-color: #fff;
+}
+
+.portfolioModelsListSection {
+    padding-block: 50px;
+}
+
+.portfolioModelsListSection .portfolioModelsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.portfolioModelsListSection .modelCard {
+    width: 20dvw;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+}
+
+.portfolioModelsListSection .modelCard .viewLink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000006b;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.portfolioModelsListSection .modelCard .viewLink button {
+    font-family: "BrilliantCutMedium";
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: flex;
+    transition: all 0.4s;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    background-color: transparent;
+    letter-spacing: 2px;
+}
+
+.portfolioModelsListSection .modelCard .viewLink button:hover {
+    background-color: #ffffff25;
+}
+
+.portfolioModelsListSection .modelCard:hover .viewLink {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolioModelsListSection .modelCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolioModelsListSection .modelCard h4 {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: "SackersGothic";
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding: 30px;
+}
+
+.portfolioModelsListSection .loadMoreButtonWrapper {
+    display: flex;
+    justify-content: center;
+    padding-block: 50px;
+}
+
+.portfolioModelsListSection .loadMoreButtonWrapper button {
+    font-family: "SackersGothic";
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    text-transform: capitalize;
+    display: flex;
+    transition: all 0.4s;
+    text-decoration: none;
+    padding: 10px 30px;
+    border: 3px solid #000;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.portfolioModelsListSection .loadMoreButtonWrapper button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.singleModelPopUpWrapper {
+    position: fixed;
+    background-color: #0000004b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100vh;
+    transition: all 0.4s;
+    opacity: 0;
+    visibility: hidden;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.singleModelPopUpWrapper .closePopUp {
+    font-family: "BrilliantCutMedium";
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: flex;
+    transition: all 0.4s;
+    text-decoration: none;
+    padding: 5px 20px;
+    border: 2px solid #ffffff;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    border-radius: 30px;
+    background-color: #fff;
+    transform: translateY(-200vh);
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 90vh;
+}
+
+.singleModelPopUpWrapper.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.singleModelPopUpWrapper.active .singleModelPopUp {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupImage {
+    flex: 1;
+    max-width: 50%;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupImage .singleModelSwiper {
+    height: 100%;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupImage .singleModelSwiper .swiper-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupContent {
+    flex: 1;
+    display: flex;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    padding-block: 40px;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .title {
+    font-family: "BrilliantCutMedium";
+    white-space: wrap;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    padding: 0 30px 0 60px;
+    margin-top: 40px;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .description {
+    padding: 0 30px 0 60px;
+    font-family: "SackersGothic";
+    white-space: wrap;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #000;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .description .subtitle {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .description li {
+    text-transform: lowercase;
+    margin-bottom: 8px;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .contactInfo {
+    padding: 0 30px 0 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .shareInfo a,
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .contactInfo a {
+    font-family: "SackersGothic";
+    white-space: wrap;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #000;
+    padding-bottom: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: max-content;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .shareInfo a img,
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .contactInfo a img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .shareInfo a::after,
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .contactInfo a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #d50032;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .shareInfo a:hover::after,
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .contactInfo a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .shareInfo a:not(:hover)::after,
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .contactInfo a:not(:hover)::after {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupContent .shareInfo {
+    padding: 0 30px 0 60px;
+    display: flex;
+    gap: 40px;
+}
+
+.singleModelPopUpWrapper .singleModelPopUp .popupImage .singleModelSwiper .swiper-button-next::after,
+.singleModelPopUpWrapper .singleModelPopUp .popupImage .singleModelSwiper .swiper-button-prev::after {
+    content: '';
+}
+
+
+.singleModelPopUpWrapper .singleModelPopUp .popupImage .singleModelSwiper .swiper-button-next img,
+.singleModelPopUpWrapper .singleModelPopUp .popupImage .singleModelSwiper .swiper-button-prev img {
+    width: auto;
+    height: 30px;
+    object-fit: contain;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .pageTitleSectionWrapper {
+        padding-top: 63px;
+    }
+
+    .pageTitleSection {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .pageTitleSection .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding-inline: 20px;
+    }
+
+    .pageTitleSection h2 {
+        max-width: 100vw;
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .pageTitleSection .productFilterButtons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .pageTitleSection .productFilterButtons .filterButtons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .pageTitleSection .productFilterButtons .filterButtons input {
+        display: none;
+    }
+
+    .pageTitleSection .productFilterButtons .filterButtons .button {
+        font-size: 12px;
+        padding: 3px 6px;
+        border-radius: 10px;
+        line-height: 16px;
+    }
+
+    .pageTitleSection .productFilterButtons .showAllButton {
+        font-size: 12px;
+        line-height: 16px;
+        padding: 3px 6px;
+        max-width: min-content;
+        white-space: nowrap;
+    }
+
+    .portfolioModelsListSection {
+        padding-block: 30px;
+    }
+
+    .portfolioModelsListSection .portfolioModelsList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .portfolioModelsListSection .modelCard {
+        grid-column: span 1;
+        aspect-ratio: 1/1;
+        width: 100%;
+    }
+
+    .portfolioModelsListSection .modelCard img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .portfolioModelsListSection .modelCard h4 {
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .portfolioModelsListSection .loadMoreButtonWrapper {
+        padding-bottom: 0;
+        padding-top: 30px;
+    }
+
+    .portfolioModelsListSection .loadMoreButtonWrapper button {
+        padding: 8px 30px;
+        border: 2px solid #000;
+    }
+
+    .singleModelPopUpWrapper {
+        justify-content: end;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+
+    .singleModelPopUpWrapper .singleModelPopUp {
+        width: 90%;
+        height: 90%;
+        border-radius: 20px;
+        flex-direction: column;
+    }
+
+    .singleModelPopUpWrapper .singleModelPopUp .popupImage {
+        max-width: 100%;
+    }
+
+    .singleModelPopUpWrapper .singleModelPopUp .popupContent {
+        flex: 1;
+        gap: 10px;
+        padding-block: 20px;
+    }
+
+    .singleModelPopUpWrapper .singleModelPopUp .popupContent .title {
+        font-size: 18px;
+        line-height: 22px;
+        padding: 0 20px;
+        margin-top: 10px;
+    }
+
+    .singleModelPopUpWrapper .singleModelPopUp .popupContent .description {
+        padding: 0 20px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .singleModelPopUpWrapper .singleModelPopUp .popupContent .contactInfo {
+        padding: 0 20px;
+        gap: 8px;
+    }
+
+    .singleModelPopUpWrapper .singleModelPopUp .popupContent .shareInfo {
+        padding: 0 20px;
+        justify-content: center;
+    }
+
+    .singleModelPopUpWrapper .singleModelPopUp .popupImage .singleModelSwiper .swiper-button-next img,
+    .singleModelPopUpWrapper .singleModelPopUp .popupImage .singleModelSwiper .swiper-button-prev img {
+        height: 20px;
+    }
+
+    .singleModelPopUpWrapper .singleModelPopUp .popupImage .singleModelSwiper .swiper-button-next {
+        right: 3px;
+    }
+
+    .singleModelPopUpWrapper .singleModelPopUp .popupImage .singleModelSwiper .swiper-button-prev {
+        left: 3px;
+    }
+
+}

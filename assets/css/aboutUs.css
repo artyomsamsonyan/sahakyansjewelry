@@ -1,0 +1,109 @@
+.pageContentSectionWrapper {
+    background-color: #fff;
+}
+
+
+.pageContentSection {
+    padding-block: 60px;
+}
+
+.pageContentSection h4 {
+    font-family: "WalbaumCom-Roman";
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.pageContentSection ul,
+.pageContentSection p {
+    font-family: "SackersGothic";
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+    margin-bottom: 50px;
+    text-transform: lowercase;
+    transition: all 0.2s;
+    letter-spacing: -1px;
+    max-width: 660px;
+}
+
+.pageContentSection ul li {
+    margin-bottom: 10px;
+}
+
+.pageContentSection .container {
+    display: flex;
+    gap: 20px;
+}
+
+.pageContentSection .contentCol {
+    flex: 1;
+}
+
+.pageContentSection .contentCol.fixed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.pageContentSection .contentCol.fixed .getInTouchBtn {
+    font-family: "SackersGothic";
+    font-size: 20px;
+    line-height: 22px;
+    width: max-content;
+    padding: 12px 30px;
+    border: 3px solid #000;
+    color: #000;
+    background-color: transparent;
+    position: fixed;
+    top: 50%;
+    right: 30%;
+    transform: translate(35%, -50%);
+    text-decoration: none;
+    transition: all 0.4s;
+    z-index: 1;
+}
+
+.pageContentSection .contentCol.fixed .getInTouchBtn:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .pageContentSection {
+        padding-block: 30px;
+    }
+
+    .pageContentSection .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pageContentSection .contentCol.fixed .getInTouchBtn {
+        position: static;
+        transform: unset;
+    }
+
+    .pageContentSection h4 {
+        font-size: 30px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+
+    .pageContentSection ul,
+    .pageContentSection p {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 30px;
+    }
+
+}

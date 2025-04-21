@@ -1,0 +1,291 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* backdrop-filter: blur(7px); */
+    padding: 15px 20px;
+    z-index: 10;
+    transition: all 0.8s ease;
+}
+
+header:hover {
+    background-color: #fff;
+}
+
+header:hover .navigationList a {
+    color: #000;
+}
+
+header:hover .headerBox .mainLogo {
+    filter: invert(1);
+}
+
+.headerBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.headerBox .mainLogo {
+    font-family: "Jost";
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.8s ease;
+}
+
+.headerBox .mainLogo img {
+    width: auto;
+    height: 45px;
+    object-fit: contain;
+}
+
+.headerBox .navigationList ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.headerBox .navigationList a {
+    font-family: "SackersGothic";
+    font-size: 12px;
+    font-weight: 100;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.headerBox .navigationList a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #d50032;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.headerBox .navigationList a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header:hover .headerBox .navigationList li.current_page_item a {
+    transform: scale3d(2);
+}
+
+header:hover .headerBox .navigationList li.current_page_item a::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    font-weight: 800;
+}
+
+.headerBox .navigationList a:not(:hover)::after {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.headerBox .navigationList a:hover,
+.headerBox .navigationList a.active {
+    font-weight: 800;
+}
+
+.closeMobileMenu,
+.openMobileMenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+
+.closeMobileMenu img,
+.openMobileMenu img {
+    width: auto;
+    height: 24px;
+    object-fit: contain;
+}
+
+.mobileNavMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    z-index: 3;
+    padding-top: 63px;
+    transform: translateX(-200vw);
+    transition: all 0.4s;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobileNavMenu .navigationList {
+    margin-inline: 20px;
+    border-top: 1px solid #4e4e4e;
+    padding-block: 30px;
+}
+
+.mobileNavMenu .navigationList ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mobileNavMenu .navigationList a {
+    font-family: "SackersGothic";
+    font-size: 12px;
+    font-weight: 100;
+    color: #000;
+    text-decoration: none;
+    padding-block: 10px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobileNavMenu .navigationList a img {
+    width: auto;
+    height: 20px;
+    object-fit: contain;
+}
+
+.mobileNavMenu .socialLinkList {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 20px;
+    border-top: 1px solid #4e4e4e;
+    padding-block: 30px;
+}
+
+.mobileNavMenu .socialLinkList a {
+    display: flex;
+    align-items: center;
+}
+
+.mobileNavMenu .socialLinkList a img {
+    width: auto;
+    height: 20px;
+    object-fit: contain;
+    filter: invert();
+}
+
+header.scrolled {
+    background-color: #ffffff !important;
+}
+
+header.scrolled .headerBox .mainLogo {
+    filter: invert(1);
+}
+
+header.scrolled .headerBox .navigationList a {
+    color: #000000 !important;
+}
+
+header.scrolled .headerBox .navigationList a.active,
+header.scrolled .headerBox .navigationList a:hover {
+    border-color: #000000 !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .headerBox .navigationList {
+        display: none;
+    }
+
+    header {
+        padding: 14px 5px;
+    }
+
+    .headerBox .mainLogo {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    header:hover {
+        background-color: #fff;
+    }
+
+    .headerBox {
+        position: relative;
+        z-index: 5;
+    }
+
+    .openMobileMenu {
+        display: block;
+    }
+
+    header:hover {
+        background-color: transparent;
+    }
+
+    header:hover .navigationList a {
+        color: #fff;
+    }
+
+    header:hover .headerBox .mainLogo {
+        filter: invert(1);
+    }
+
+    header.scrolled .openMobileMenu .white,
+    .closeMobileMenu .black,
+    .openMobileMenu .black {
+        display: none;
+    }
+
+    header.scrolled .closeMobileMenu .black,
+    header.scrolled .openMobileMenu .black,
+    .openMobileMenu .white {
+        display: block;
+    }
+
+    .mobileNavMenu.opened {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    header.scrolled {
+        background-color: #ffffff !important;
+    }
+
+    header.scrolled .headerBox .mainLogo {
+        filter: invert(1);
+    }
+
+    header.scrolled .headerBox .navigationList a {
+        color: #000000 !important;
+    }
+
+    header.scrolled .headerBox .navigationList a.active,
+    header.scrolled .headerBox .navigationList a:hover {
+        border-color: #fff !important;
+    }
+
+    .headerBox .mainLogo img {
+        height: 35px;
+    }
+
+}

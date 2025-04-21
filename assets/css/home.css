@@ -1,0 +1,590 @@
+/* Hero Section */
+
+.heroSectionWrapper {
+    width: 100%;
+    height: 100dvh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.heroSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+}
+
+.heroSection h1 {
+    font-family: "WalbaumCom-Roman";
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: 500;
+    color: #fff;
+    white-space: wrap;
+    text-transform: uppercase;
+    z-index: 2;
+    max-width: 523px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.heroSection .discoverMoreBtn {
+    font-family: "SackersGothic";
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #fff;
+    transition: all 0.4s;
+    text-decoration: none;
+    padding: 10px 25px;
+    border: 2px solid #fff;
+    z-index: 2;
+    margin-bottom: 50px;
+    text-transform: lowercase;
+    transition: all 0.2s;
+}
+
+.heroSection .discoverMoreBtn:hover {
+    background-color: #0000002b;
+}
+
+.heroSection video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100dvh;
+    object-fit: cover;
+}
+
+.heroSection .backgroundFon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: #000;
+    width: 100%;
+    height: 100dvh;
+    opacity: 0.5;
+}
+
+/* Intro Section */
+.introSectionWrapper {
+    background-color: #000000;
+}
+
+.introSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 10px;
+    padding-inline: 20px;
+}
+
+.introSection h2 {
+    max-width: 100vw;
+    font-family: "WalbaumCom-Roman";
+    white-space: nowrap;
+    font-size: 1.8vw;
+    line-height: 50px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Creation Steps Section */
+.creationStepsSectionWrapper {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-top: 50px;
+}
+
+.creationStepsSectionWrapper h2 {
+    font-family: "WalbaumCom-Roman";
+    font-size: 36px;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.creationStepsSection {
+    display: flex;
+    overflow: hidden;
+}
+
+.creationStepsSection .stepBox {
+    flex: 1;
+    height: 500px;
+    transition: all 0.3s ease;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.creationStepsSection .stepBox .step {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #00000070;
+    transition: all 0.3s ease;
+}
+
+.creationStepsSection .stepBox .index {
+    font-family: "SackersGothic";
+    font-size: 100px;
+    font-weight: 300;
+    color: #fff;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.creationStepsSection .stepBox .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+}
+
+.creationStepsSection .stepBox .content h3 {
+    font-family: "WalbaumCom-Roman";
+    font-size: 32px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    padding: 10px;
+    padding-left: 25%;
+}
+
+.creationStepsSection .stepBox .content p {
+    font-family: "SackersGothic";
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    opacity: 0;
+    max-width: 380px;
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+}
+
+.creationStepsSection .stepBox:hover .content h3 {
+    backdrop-filter: none;
+    padding-left: 0;
+}
+
+.creationStepsSection .stepBox:hover {
+    flex: 1.9;
+    transform: scale(1.1);
+}
+
+.creationStepsSection .stepBox:hover .step {
+    backdrop-filter: blur(10px);
+}
+
+.creationStepsSection .stepBox:hover .content p {
+    opacity: 1;
+}
+
+.creationStepsSection .stepBox:hover .index {
+    /* transform: translate(-240px, 220px); */
+    position: absolute;
+    top: 45px;
+    opacity: 1;
+}
+
+/* Work With Section */
+.workWithSectionWrapper {
+    background-color: #fff;
+    padding-bottom: 60px;
+}
+
+.workWithSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-top: 60px;
+}
+
+.workWithSection h2 {
+    font-family: "WalbaumCom-Roman";
+    font-size: 36px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+    max-width: 70%;
+    text-transform: uppercase;
+}
+
+.workWithSection .softwaresGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.workWithSection .softwaresGrid .item {
+    grid-column: span 1;
+    aspect-ratio: 1/1;
+    border: 2px solid #e3e0dc33;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.workWithSection .softwaresGrid .item img {
+    width: 170px;
+    height: auto;
+    object-fit: contain;
+}
+
+.workWithSection .softwaresGrid .item .contentBlur {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s;
+    background-color: #ffffffd4;
+    display: flex;
+}
+
+.workWithSection .softwaresGrid .item .contentBlur .title {
+    font-family: "WalbaumCom-Roman";
+    font-size: 35px;
+    font-weight: 400;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    padding-inline: 20px;
+}
+
+.workWithSection .softwaresGrid .item .contentBlur a {
+    margin-top: 80px;
+    font-family: "SackersGothic";
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.workWithSection .softwaresGrid .item .contentBlur a img {
+    position: absolute;
+    right: 23%;
+    width: auto;
+    height: 20px;
+    object-fit: contain;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.workWithSection .softwaresGrid .item .contentBlur a:hover {
+    background-color: #0000009c;
+    color: #ffffffd4;
+}
+
+.workWithSection .softwaresGrid .item .contentBlur a:hover img,
+.workWithSection .softwaresGrid .item:hover .contentBlur {
+    opacity: 1;
+}
+
+/* Models By Type Section */
+.modelsByTypeSectionWrapper {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-block: 60px;
+}
+
+.modelsByTypeSectionWrapper h2 {
+    font-family: "WalbaumCom-Roman";
+    font-size: 36px;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.modelsByTypeSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.modelsByTypeSection .typeItem {
+    grid-column: span 1;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.modelsByTypeSection .typeItem img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.modelsByTypeSection .typeItem .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    transition: all 0.4s;
+    background-color: #00000070;
+}
+
+.modelsByTypeSection .typeItem .content a {
+    opacity: 0;
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    font-family: "SackersGothic";
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: lowercase;
+    transition: all 0.4s;
+    text-decoration: none;
+    width: min-content;
+    height: min-content;
+    padding: 4px 10px;
+    border: 1.5px solid #fff;
+}
+
+.modelsByTypeSection .typeItem .content h3 {
+    font-family: "WalbaumCom-Roman";
+    font-size: 40px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    transition: transform 0.4s;
+    max-width: min-content;
+}
+
+.modelsByTypeSection .typeItem:hover .content a {
+    opacity: 1;
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modelsByTypeSection .typeItem .content a:hover {
+    background-color: #0000002b;
+}
+
+.modelsByTypeSection .typeItem:hover .content {
+    backdrop-filter: blur(20px);
+}
+
+
+.modelsByTypeSection .typeItem:hover .content h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 768px) {
+    .heroSection h1 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .heroSection .discoverMoreBtn {
+        font-size: 14px;
+        line-height: 19px;
+        padding: 5px 15px;
+        margin-bottom: 20px;
+    }
+
+    .introSection {
+        padding-block: 8px;
+        padding-inline: 10px;
+    }
+
+    .introSection h2 {
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 300;
+        white-space: wrap;
+    }
+
+    .workWithSection,
+    .modelsByTypeSectionWrapper,
+    .creationStepsSectionWrapper {
+        gap: 20px;
+        padding-block: 20px;
+    }
+
+    .workWithSection h2,
+    .modelsByTypeSectionWrapper h2,
+    .creationStepsSectionWrapper h2 {
+        font-size: 22px;
+    }
+
+    .creationStepsSection {
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
+
+    .creationStepsSection .stepBox .step {
+        padding: 20px;
+        height: 180px;
+        gap: 15px;
+        background-color: #00000070;
+        transition: all 0.3s ease;
+    }
+
+    .creationStepsSection .stepBox .index {
+        display: none;
+    }
+
+
+    .creationStepsSection .stepBox .content {
+        justify-content: center;
+    }
+
+    .creationStepsSection .stepBox .content h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .creationStepsSection .stepBox .content p {
+        font-size: 12px;
+        opacity: 1;
+        text-align: center;
+    }
+
+    .modelsByTypeSection {
+        gap: 5px;
+    }
+
+    .modelsByTypeSection .typeItem .content {
+        padding: 14px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .modelsByTypeSection .typeItem .content a {
+        bottom: 30px;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 300;
+        padding: 3px 10px;
+        border: 1.5px solid #fff;
+    }
+
+    .modelsByTypeSection .typeItem:hover .content a {
+        opacity: 1;
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    .modelsByTypeSection .typeItem .content h3 {
+        font-size: 20px;
+    }
+
+    .modelsByTypeSection .typeItem:hover .content h3 {
+        top: 45%;
+    }
+
+    .workWithSectionWrapper {
+        padding: 0;
+    }
+
+    .workWithSection .softwaresGrid {
+        gap: 5px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .workWithSection h2 {
+        max-width: 80%;
+    }
+
+    .workWithSection .softwaresGrid .item {
+        border-radius: 10px;
+    }
+
+    .workWithSection .softwaresGrid .item img {
+        width: 70%;
+    }
+
+    .workWithSection .softwaresGrid .item .contentBlur .title {
+        font-size: 18px;
+        padding-inline: 10px;
+    }
+
+    .workWithSection .softwaresGrid .item .contentBlur a {
+        margin-top: 48px;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .workWithSection .softwaresGrid .item .contentBlur a img {
+        right: 10%;
+        height: 17px;
+    }
+
+    .workWithSection .softwaresGrid .item:hover .contentBlur a {
+        background-color: #0000009c;
+        color: #ffffffd4;
+    }
+
+    .workWithSection .softwaresGrid .item:hover .contentBlur a img {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,99 @@
+.pageContentSection .contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-block: 40px;
+    padding-left: 30px;
+}
+
+.pageContentSection .contactInfo a {
+    font-family: "SackersGothic";
+    white-space: wrap;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #000;
+    padding-bottom: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: max-content;
+}
+
+.pageContentSection .messengersBox .messengerLink img,
+.pageContentSection .contactInfo a img {
+    width: auto;
+    height: 22px;
+    object-fit: contain;
+}
+
+.pageContentSection .contactInfo a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #d50032;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pageContentSection .contactInfo a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.pageContentSection .contactInfo a:not(:hover)::after {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pageContentSection .messengersBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.pageContentSection .messengersBox .messengerLink {
+    font-family: "SackersGothic";
+    font-size: 16px;
+    line-height: 18px;
+    width: max-content;
+    padding: 12px 30px;
+    border: 3px solid #000;
+    color: #000;
+    background-color: transparent;
+    text-decoration: none;
+    transition: all 0.4s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pageContentSection .contentCol.contact p {
+    margin-bottom: 10px;
+}
+
+.pageContentSection .messengersBox .messengerLink:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.pageContentSection .messengersBox .messengerLink:hover img {
+    filter: invert(1);
+}
+
+@media only screen and (max-width: 768px) {
+    .pageContentSection .messengersBox {
+        flex-direction: column;
+    }
+}
